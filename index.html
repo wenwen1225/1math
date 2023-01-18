@@ -5,22 +5,25 @@
 <title>阿拉伯數字轉國字數字</title>
 </head>
 <script language="javascript">
-  ans=parseFloat(prompt("請輸入想轉換的數值","528965"));
+    function digitalTransfer(){
+        var txtInput=document.getElementById("txtInput");  //alert(txtInput.value); //輸入的值
+        var txtOutput=document.getElementById("txtOutput");
 
-  String digitalTransfer(int iInput) {
-      string sOut = "";
-      if(ans<=100000000){
+    }
 
-      }else{
-          document.write("數字太大了，我們只處理到億！");
-      }
-
-      return sOut;
-
-      document.write(sOut);
-  }
 </script>
-	
+
 <body>
+<p>
+    <label for="password">請輸入想轉換數值:</label>
+    <textarea name="txtInput" id="txtInput" cols="45" rows="5"></textarea>
+</p>
+<p>
+    <input type="button" name="button" id="button" value="轉換" onClick="digitalTransfer();">
+</p>
+<p>
+    <label for="password2">轉換結果:</label>
+    <textarea name="txtOutput" id="txtOutput" cols="45" rows="5"></textarea>
+</p>
 </body>
 </html>
