@@ -6,8 +6,15 @@
 </head>
 <script language="javascript">
     function digitalTransfer(){
-        var txtInput=document.getElementById("txtInput");  //alert(txtInput.value); //輸入的值
-        var txtOutput=document.getElementById("txtOutput");
+        var numInput=document.getElementById("numInput");  //alert(numInput.value);
+        var numOutput=document.getElementById("numOutput");
+        //var sOut=numInput.value;
+        //alert(sOut.value);
+        if(numInput.value<=100000000){
+
+        }else{
+            alert("數字太大了，我們只處理到億！");
+        }
 
     }
 
@@ -16,14 +23,14 @@
 <body>
 <p>
     <label for="password">請輸入想轉換數值:</label>
-    <textarea name="txtInput" id="txtInput" cols="45" rows="5"></textarea>
+    <textarea name="numInput" id="numInput" cols="45" rows="5"></textarea>
 </p>
 <p>
     <input type="button" name="button" id="button" value="轉換" onClick="digitalTransfer();">
 </p>
 <p>
     <label for="password2">轉換結果:</label>
-    <textarea name="txtOutput" id="txtOutput" cols="45" rows="5"></textarea>
+    <textarea name="numOutput" id="numOutput" cols="45" rows="5"></textarea>
 </p>
 </body>
 </html>
