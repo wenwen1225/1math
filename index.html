@@ -16,11 +16,11 @@
             for(var i=0;i<sOut.length;i++)
                 newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i))+" 仟佰拾".charAt(sOut.charAt(i)); //alert(newtxt+"元整");  //換成大寫國字
             numOutput.innerHTML=newtxt+"元整";
-
-        }else if(sOut>=10000){  //大於萬
-            newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i))+"仟佰拾萬仟佰拾".charAt(sOut.charAt(i)); 	//未用好
+        }else if(sOut<999999999){  //小於億
+            for(var i=0;i<sOut.length;i++)
+                newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i))+" 億仟佰拾萬仟佰拾".charAt(sOut.charAt(i)); 	//未用好
             numOutput.innerHTML=newtxt+"元整";
-        }else{
+        }else if(sOut>999999999){  //大於億
             alert("數字太大了，我們只處理到億！");
         }
     }
