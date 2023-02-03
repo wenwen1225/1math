@@ -14,8 +14,8 @@
 
         if(numInput.value<=100000000){  //小於億
             for(var i=0;i<sOut.length;i++)
-                newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i));  //換成大寫國字
-            //alert(newtxt+"元整");
+                newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i)); //alert(newtxt+"元整");  //換成大寫國字
+            numOutput.innerHTML=newtxt+"元整";
         }else{
             alert("數字太大了，我們只處理到億！");
         }
