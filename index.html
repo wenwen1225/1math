@@ -2,15 +2,16 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>阿拉伯數字轉國字數字</title>
+<title>阿拉伯數字轉國字大寫數字</title>
 </head>
 <script language="javascript">
     function digitalTransfer(){
-        var numInput=document.getElementById("numInput");  //alert(numInput.value);
-        var numOutput=document.getElementById("numOutput");
-        //var sOut=numInput.value;
-        //alert(sOut.value);
-        if(numInput.value<=100000000){
+        var numInput=document.getElementById("numInput");  //alert(numInput.value);  //輸入的值
+        var numOutput=document.getElementById("numOutput");    //輸出的值
+        var txt=["零","壹","贰","叁","肆","伍","陆","柒","捌","玖"];  //加單位.元整
+        var sOut=numInput.value;  //取的輸入的值
+        alert(sOut);
+        if(numInput.value<=100000000){  //小於億
 
         }else{
             alert("數字太大了，我們只處理到億！");
