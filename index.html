@@ -8,11 +8,12 @@
     function digitalTransfer(){
         var numInput=document.getElementById("numInput");  //alert(numInput.value);  //輸入的值
         var numOutput=document.getElementById("numOutput");    //輸出的值
-        var txt=["零","壹","贰","叁","肆","伍","陆","柒","捌","玖"];  //加單位.元整
         var sOut=numInput.value;  //取的輸入的值
         alert(sOut);
         if(numInput.value<=100000000){  //小於億
-
+            for(var i=0;i<sOut.length;i++)
+                newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i));  //換成大寫國字
+            //alert(newtxt+"元整");
         }else{
             alert("數字太大了，我們只處理到億！");
         }
