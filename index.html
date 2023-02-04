@@ -12,15 +12,55 @@
         alert(sOut);
         var newtxt="";
 
-        if(sOut<10000){  //小於萬
+        /*if(sOut<10000){  //小於萬
+			for(var i=0;i<sOut.length;i++)
+				newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i))+" 仟佰拾".charAt(sOut.charAt(i)); //alert(newtxt+"元整");  //換成大寫國字
+			numOutput.innerHTML=newtxt+"元整";
+		}else if(sOut<=99999999){  //小於仟億
+			for(var i=0;i<sOut.length;i++)
+				newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i))+" 仟佰拾萬仟佰拾".charAt(sOut.charAt(i)); 	//未用好
+			numOutput.innerHTML=newtxt+"元整";
+		}else if(sOut<=999999999){  //小於億
+			for(var i=0;i<sOut.length;i++)
+				newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i))+" 億仟佰拾萬仟佰拾".charAt(sOut.charAt(i)); 	//未用好
+			numOutput.innerHTML=newtxt+"元整";
+		}else if(sOut>999999999){  //大於億
+			alert("數字太大了，我們只處理到億！");
+		}*/
+
+        if(sOut>0 && sOut<100){
             for(var i=0;i<sOut.length;i++)
-                newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i))+" 仟佰拾".charAt(sOut.charAt(i)); //alert(newtxt+"元整");  //換成大寫國字
+                newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i))+"拾".charAt(sOut.charAt(i-1)); //alert(newtxt+"元整");  //換成大寫國字
             numOutput.innerHTML=newtxt+"元整";
-        }else if(sOut<999999999){  //小於億
+        }else if(sOut>=100 && sOut<1000){
             for(var i=0;i<sOut.length;i++)
-                newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i))+" 億仟佰拾萬仟佰拾".charAt(sOut.charAt(i)); 	//未用好
+                newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i))+"佰拾 ".charAt(sOut.charAt(i-1));
             numOutput.innerHTML=newtxt+"元整";
-        }else if(sOut>999999999){  //大於億
+        }else if(sOut>=1000 && sOut<10000){
+            for(var i=0;i<sOut.length;i++)
+                newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i))+"仟佰拾".charAt(sOut.charAt(i-1));
+            numOutput.innerHTML=newtxt+"元整";
+        }else if(sOut>=10000 && sOut<100000){
+            for(var i=0;i<sOut.length;i++)
+                newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i))+"萬仟佰拾".charAt(sOut.charAt(i));
+            numOutput.innerHTML=newtxt+"元整";
+        }else if(sOut>=100000 && sOut<1000000){
+            for(var i=0;i<sOut.length;i++)
+                newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i))+"拾萬仟佰拾".charAt(sOut.charAt(i));
+            numOutput.innerHTML=newtxt+"元整";
+        }else if(sOut>=1000000 && sOut<10000000){
+            for(var i=0;i<sOut.length;i++)
+                newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i))+"佰拾萬仟佰拾".charAt(sOut.charAt(i));
+            numOutput.innerHTML=newtxt+"元整";
+        }else if(sOut>=10000000 && sOut<100000000){
+            for(var i=0;i<sOut.length;i++)
+                newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i))+"仟佰拾萬仟佰拾".charAt(sOut.charAt(i));
+            numOutput.innerHTML=newtxt+"元整";
+        }else if(sOut>=100000000 && sOut<100000000){
+            for(var i=0;i<sOut.length;i++)
+                newtxt+="零壹贰叁肆伍陆柒捌玖".charAt(sOut.charAt(i))+"億仟佰拾萬仟佰拾".charAt(sOut.charAt(i));
+            numOutput.innerHTML=newtxt+"元整";
+        }else if(sOut>=1000000000){
             alert("數字太大了，我們只處理到億！");
         }
     }
